@@ -32,7 +32,8 @@ namespace BookStore.Models
                         ISBN = "978-0451419439",
                         Classification = "Fiction",
                         Category = "Classic",
-                        Price = 9.95
+                        Price = 9.95,
+                        NumberOfPages = 1488
                     },
 
                     new Book
@@ -45,7 +46,8 @@ namespace BookStore.Models
                         ISBN = "978-0743270755",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 14.58
+                        Price = 14.58,
+                        NumberOfPages = 944
                     },
 
                     new Book
@@ -58,7 +60,9 @@ namespace BookStore.Models
                         ISBN = "978-0553384611",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 21.54
+                        Price = 21.54,
+                        NumberOfPages = 832
+
                     },
 
                     new Book
@@ -71,7 +75,8 @@ namespace BookStore.Models
                         ISBN = "978-0812981254",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 11.61
+                        Price = 11.61,
+                        NumberOfPages = 864
                     },
 
                     new Book
@@ -84,7 +89,8 @@ namespace BookStore.Models
                         ISBN = "978-0812974492",
                         Classification = "Non-Fiction",
                         Category = "Historical",
-                        Price = 13.33
+                        Price = 13.33,
+                        NumberOfPages = 528
                     },
 
                     new Book
@@ -97,7 +103,8 @@ namespace BookStore.Models
                         ISBN = "978-0804171281",
                         Classification = "Fiction",
                         Category = "Historical Fiction",
-                        Price = 15.95
+                        Price = 15.95,
+                        NumberOfPages = 288
                     },
 
                     new Book
@@ -110,7 +117,8 @@ namespace BookStore.Models
                         ISBN = "978-1455586691",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 14.99
+                        Price = 14.99,
+                        NumberOfPages = 304
                     },
 
                     new Book
@@ -123,7 +131,8 @@ namespace BookStore.Models
                         ISBN = "978-1455523023",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 21.66
+                        Price = 21.66,
+                        NumberOfPages = 240
                     },
 
                     new Book
@@ -136,7 +145,8 @@ namespace BookStore.Models
                         ISBN = "978-1591847984",
                         Classification = "Non-Fiction",
                         Category = "Business",
-                        Price = 29.16
+                        Price = 29.16,
+                        NumberOfPages = 400
                     },
 
                     new Book
@@ -149,7 +159,50 @@ namespace BookStore.Models
                         ISBN = "978-0553393613",
                         Classification = "Fiction",
                         Category = "Thrillers",
-                        Price = 15.03
+                        Price = 15.03,
+                        NumberOfPages = 642
+                    },
+
+                    new Book
+                    {
+                        Title = "Insights From a Prophet's Life",
+                        AuthorFirstName = "Sheri",
+                        AuthorMiddleName = "L.",
+                        AuthorLastName = "Dew",
+                        Publisher = "Deseret Book Company",
+                        ISBN = "978-629725918",
+                        Classification = "Non-Fiction",
+                        Category = "Biography",
+                        Price = 34.99,
+                        NumberOfPages = 464
+                    },
+
+                    new Book
+                    {
+                        Title = "The Hunger Games",
+                        AuthorFirstName = "Suzanne",
+                        AuthorMiddleName = "",
+                        AuthorLastName = "Collins",
+                        Publisher = "Scholastic Press",
+                        ISBN = "978-0439023481",
+                        Classification = "Fiction",
+                        Category = "Teen & Young Adult",
+                        Price = 9.96,
+                        NumberOfPages = 386
+                    },
+
+                    new Book
+                    {
+                        Title = "Catching Fire",
+                        AuthorFirstName = "Suzanne",
+                        AuthorMiddleName = "",
+                        AuthorLastName = "Collins",
+                        Publisher = "Scholastic Press",
+                        ISBN = "978-0545586177",
+                        Classification = "Fiction",
+                        Category = "Teen & Young Adult",
+                        Price = 10.45,
+                        NumberOfPages = 391
                     }
 
                 );

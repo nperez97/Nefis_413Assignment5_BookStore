@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using BookStore.Models.ViewModels;
 
 namespace BookStore.Controllers
 {
@@ -14,15 +15,32 @@ namespace BookStore.Controllers
         private readonly ILogger<HomeController> _logger;
         private IBookStoreRepository _repository;
 
+        //making variable to indicate how many books to display for pagination
+        public int PageSize = 5;
+
         public HomeController(ILogger<HomeController> logger, IBookStoreRepository repository) //pass repository
         {
             _logger = logger;
             _repository = repository;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1) //pretend two is passed in
         {
-            return View(_repository.Books); //allows iqueryable to be passed in
+            //allows iqueryable to be passed in
+            return View(new BookListViewModel
+            {
+                Books = _repository.Books
+                    .OrderBy(p => p.BookId) // orderby is written in language called linq, which helps you query the database
+                    .Skip((page - 1) * PageSize) //2-1. then does 1 times 20 (assuming we set it to 20)
+                    .Take(PageSize) //takes next 20 to display
+                ,
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalNumItems = _repository.Books.Count()
+                }
+            });
         }
 
         public IActionResult Privacy()
