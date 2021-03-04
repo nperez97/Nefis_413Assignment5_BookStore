@@ -10,5 +10,7 @@ namespace BookStore.Models.ViewModels
         //model will now contain books and paging info
         public IEnumerable<Book> Books { get; set; }
         public PagingInfo PagingInfo { get; set; }
+
+        public string Type { get; set; } // gets set on controller side
     }
 }

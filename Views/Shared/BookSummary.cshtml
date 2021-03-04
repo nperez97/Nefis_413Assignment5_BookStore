@@ -1,0 +1,24 @@
+﻿@model Book
+
+<div class="container">
+    <div class="card bg-light text-dark">
+        <div class="card-body">
+            <!--BOOTSTRAP CHANGE: used bootstrap to create float with spacing compared to using the style attribute
+                also made this color green for the pill-->
+            <span class="badge badge-pill badge-success p-2 float-md-right">
+                <p class="card-text"><strong>Price:</strong> $@Model.Price</p>
+            </span>
+            <h5 class="card-title"><strong>Book Title:</strong> @Model.Title</h5>
+            <p class="card-text"><strong>Book ID:</strong> @Model.BookId</p>
+            <p class="card-text"><strong>Author First Name:</strong> @Model.AuthorFirstName</p>
+            <p class="card-text"><strong>Author Middle Name:</strong> @Model.AuthorMiddleName</p>
+            <p class="card-text"><strong>Author Last Name:</strong> @Model.AuthorLastName</p>
+            <p class="card-text"><strong>Publisher:</strong> @Model.Publisher</p>
+            <p class="card-text"><strong>ISBN:</strong> @Model.ISBN</p>
+            <p class="card-text"><strong>Classification:</strong> @Model.Classification</p>
+            <p class="card-text"><strong>Category:</strong> @Model.Category</p>
+            <p class="card-text"><strong>Number of Pages:</strong> @Model.NumberOfPages</p>
+        </div>
+    </div>
+</div>
+<br />

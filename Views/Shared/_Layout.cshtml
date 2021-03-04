@@ -35,10 +35,16 @@
         </nav>
     </header>
 
+    
     <div class="container align-items-center">
         <div class="row m-1 p-1">
-            <!--BOOTSTRAP CHANGE: Made the columns auto and set to medium-->
-            <div class="col-md-auto">
+            <div class="col-4">
+                <h1>Welcome to the Online Book Store!</h1>
+                <!--below references the file we made in the component folder-->
+                <vc:navigation-menu />
+            </div>
+            
+            <div class="col-8">
                 @RenderBody()
             </div>
         </div>

@@ -30,6 +30,10 @@ namespace BookStore.Infrastructure
         public PagingInfo PageModel { get; set; }
         public string PageAction { get; set; }
 
+        //creating dictionary to hold key and whatever object that goes with key
+        [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")] //allows to create a common prefix which will become entries in dictionary
+        public Dictionary<string, object> PageUrlValues { get; set; } = new Dictionary<string, object>(); //new item created
+
         public bool PageClassesEnabled { get; set; } = false;
         public string PageClass { get; set; }
         public string PageClassNormal { get; set; }
