@@ -49,18 +49,18 @@ namespace BookStore.Pages
 
         public IActionResult OnPostRemove(long bookId, string returnUrl)
         {
-
-            //Book book = repository.Books.FirstOrDefault(b => b.BookId == bookId);
+            Book book = repository.Books.FirstOrDefault(b => b.BookId == bookId);
 
             Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
 
-           //Cart.RemoveLine(book);
+            Cart.RemoveLine(book);
 
-            Cart.RemoveLine(Cart.Lines.First(cl => cl.Book.BookId == bookId).Book);
+            //Cart.RemoveLine(Cart.Lines.First(cl => cl.Book.BookId == bookId).Book);
 
             HttpContext.Session.SetJson("cart", Cart);
 
             return RedirectToPage(new { returnUrl = returnUrl });
         }
+
     }
 }
